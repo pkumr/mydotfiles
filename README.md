@@ -22,6 +22,12 @@ $uri = 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 #### Step#3 Install Plugins using :PlugInstall in VIM
 
+#### Step#4 Full Screen and Hide Menus in Gvim
+  * Download dll from (Source - https://www.vim.org/scripts/script.php?script_id=2596)
+  * Download gvimfullscreen_win32.zip
+  * Extract the dll file and add into installed location of vim (32-bit)
+  
+
 ### (2) Plugin For Mac
 
 #### Step#1 Unix Script (Source https://github.com/junegunn/vim-plug)
