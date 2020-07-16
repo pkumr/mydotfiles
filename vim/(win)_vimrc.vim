@@ -70,4 +70,5 @@ Plug 'flazz/vim-colorschemes'
 " Initialize plugin system
 call plug#end()
 
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme papercolor
