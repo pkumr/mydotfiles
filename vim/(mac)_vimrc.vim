@@ -59,6 +59,7 @@ call plug#begin('~/.vim/plugged')
 "Airline Theme PlugInstall
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
 
 "C++ Plugin
 Plug 'bfrg/vim-cpp-modern'
@@ -73,6 +74,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 call plug#end()
 "colorscheme blue
 "let g:airline_theme='kolor'
-colorscheme gruvbox
+"colorscheme gruvbox
 "colorscheme solarized
+colorscheme papercolor
 set background=dark
