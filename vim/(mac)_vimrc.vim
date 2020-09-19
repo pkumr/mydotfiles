@@ -1,9 +1,11 @@
-"set guifont=Menlo\ Regular:h15
+"set guifont=Menlo\ Regular:h15\ For\ Powerline
 
 set clipboard=unnamed
 set backspace=2
 
 syntax on
+
+set encoding=utf-8
 
 set guicursor=
 set noshowmatch
@@ -31,7 +33,8 @@ if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 12
   elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
+    set guifont=Menlo\ Regular:h12 For\ Powerline
+    " set guifont=Meslo\ LG\ S\ Regular:h15 For\ Powerline
   elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
   endif
@@ -60,21 +63,73 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
-
+Plug 'tpope/vim-fugitive'
+Plug 'bling/vim-bufferline'
 "C++ Plugin
 Plug 'bfrg/vim-cpp-modern'
 
 "Color Schemes
 Plug 'flazz/vim-colorschemes'
 Plug 'altercation/vim-colors-solarized'
-
+Plug 'powerline/powerline-fonts'
 "On Demand Loading
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 call plug#end()
 "colorscheme blue
 "let g:airline_theme='kolor'
+"colorscheme papercolor
 "colorscheme gruvbox
-"colorscheme solarized
-colorscheme papercolor
-set background=dark
+colorscheme solarized
+"set background=dark
+let g:airline_powerline_fonts=1
+
+let g:airline#extensions#wordcount#enabled=1
+
+"let g:Powerline_symbols='unicode'
+
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  " unicode symbols
+ let g:airline_left_sep = '»'
+ let g:airline_left_sep = '▶'
+ let g:airline_right_sep = '«'
+ let g:airline_right_sep = '◀'
+ let g:airline_symbols.crypt = '🔒'
+ let g:airline_symbols.linenr = '☰'
+ let g:airline_symbols.linenr = '␊'
+ let g:airline_symbols.linenr = '␤'
+ let g:airline_symbols.linenr = '¶'
+ let g:airline_symbols.maxlinenr = ''
+ let g:airline_symbols.maxlinenr = '㏑'
+ let g:airline_symbols.branch = '⎇'
+ let g:airline_symbols.paste = 'ρ'
+ let g:airline_symbols.paste = 'Þ'
+ let g:airline_symbols.paste = '∥'
+ let g:airline_symbols.spell = 'Ꞩ'
+ let g:airline_symbols.notexists = 'Ɇ'
+ let g:airline_symbols.whitespace = 'Ξ'
+
+" let g:airline_left_sep = '⮁'
+
+  " powerline symbols
+  "let g:airline_left_sep = ''
+  "let g:airline_left_alt_sep = ''
+  "let g:airline_right_sep = ''
+  "let g:airline_right_alt_sep = ''
+  "let g:airline_symbols.branch = ''
+  "let g:airline_symbols.readonly = ''
+  "let g:airline_symbols.linenr = '☰'
+  "let g:airline_symbols.maxlinenr = ''
+  "let g:airline_symbols.dirty='⚡'
+
+  " old vim-powerline symbols
+  "let g:airline_left_sep = '⮀'
+  "let g:airline_left_alt_sep = '⮁'
+  "let g:airline_right_sep = '⮂'
+  "let g:airline_right_alt_sep = '⮃'
+  "let g:airline_symbols.branch = '⭠'
+  "let g:airline_symbols.readonly = '⭤'
+ " let g:airline_symbols.linenr = '⭡'
