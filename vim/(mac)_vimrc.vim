@@ -133,3 +133,4 @@ if !exists('g:airline_symbols')
   "let g:airline_symbols.branch = '⭠'
   "let g:airline_symbols.readonly = '⭤'
  " let g:airline_symbols.linenr = '⭡'
+  autocmd filetype cpp nnoremap <F5> :w <bar> !g++ -std=c++2a -O2 -Wall % -o %:r  && ./%:r <CR>
